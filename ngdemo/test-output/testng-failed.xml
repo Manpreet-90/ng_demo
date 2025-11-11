@@ -8,7 +8,7 @@
           <include name="afterClass"/>
           <include name="tearDown"/>
           <include name="afterMethod"/>
-          <include name="InitialiseBrowser"/>
+          <include name="start"/>
           <include name="beforeClass"/>
           <include name="verifyUsername"/>
           <include name="afterSuite"/>

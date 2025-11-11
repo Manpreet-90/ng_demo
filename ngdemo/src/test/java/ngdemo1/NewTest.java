@@ -16,30 +16,34 @@ import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
 public class NewTest {
-	 public  ChromeDriver driver;
+	
+	 public ChromeDriver driver;
 
 	
 	 @BeforeSuite
 	    public void beforeSuite() {
 	        System.out.println("🧩 BeforeSuite: Setting up system properties for ChromeDriver");
-	        io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
+	      io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
 	    }
 		 @BeforeTest
-		  public void InitialiseBrowser() {
+		  public void start() {
 			 
-			  WebDriverManager.chromedriver().setup();
-				 driver=new ChromeDriver();
-				 driver.manage().window().maximize();
-			  System.out.println("browserr inistialise ");
+			 WebDriverManager.chromedriver().setup();
+			 driver=new ChromeDriver();
+			driver.manage().window().maximize();
+			  System.out.println("browserr inistialise started");
 		  }
 		 
-
+		
+		 
+		 
 		  @BeforeClass(description="navigating before class")
 		  public void beforeClass() throws InterruptedException{
 			  System.out.println("Navigating to Website ");
@@ -51,8 +55,7 @@ public class NewTest {
 		
 			 
 		  }
-
-		  
+	  
 		  
 			// 4️⃣ Runs before each @Test method
 			    @BeforeMethod

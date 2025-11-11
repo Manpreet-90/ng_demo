@@ -60,10 +60,10 @@ public class signup {
 	{
 		
 		WebElement uname=driver.findElement(By.xpath("//input[@placeholder='Name']"));
-		uname.sendKeys("navi");
+		uname.sendKeys("navidvcd");
 		
 		WebElement emm=driver.findElement(By.xpath("//input[@data-qa='signup-email']"));
-		emm.sendKeys("navi@gmail.com");
+		emm.sendKeys("nasfsvi@gmail.com");
 		
 		
 		
